@@ -20,20 +20,6 @@
                             <input type="text" class="form-control shadow-none" maxlength="70" name="website_name" value="{{ $data->website_name }}">
                         </div>
                         <div class="form-group">
-                            <label>Image Cover <span class="font-size-sm">(1080x1080px : jpg,png)</span></label>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input js-custom-file-input-enabled" name="image_cover">
-                                <label class="custom-file-label" for="example-file-input-custom" style="overflow-x: hidden;"></label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Image <span class="font-size-sm">(1080x1080px : jpg,png)</span></label>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input js-custom-file-input-enabled" name="image">
-                                <label class="custom-file-label" for="example-file-input-custom" style="overflow-x: hidden;"></label>
-                            </div>
-                        </div>
-                        <div class="form-group">
                             <label>Instagram</label>
                             <input type="text" class="form-control shadow-none" maxlength="70" name="instagram" value="{{ $data->instagram }}">
                         </div>

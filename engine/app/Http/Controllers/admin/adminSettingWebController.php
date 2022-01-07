@@ -17,6 +17,13 @@ class adminSettingWebController extends Controller
 
     public function update(Request $request, $id)
     {
-        $data = SettingWeb::find(1);
+        $settingWeb = SettingWeb::find(1);
+        $settingWeb->website_name = $request->website_name;
+        $settingWeb->instagram = $request->instagram;
+        $settingWeb->twitter = $request->twitter;
+        $settingWeb->facebook = $request->facebook;
+        $settingWeb->save();
+
+        return redirect()->route('admin.settingWeb.edit',1);
     }
 }

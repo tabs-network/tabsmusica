@@ -15,8 +15,6 @@ class SettingWebSeeder extends Seeder
             [
                 'id' => '1',
                 'website_name' => 'TABS Musica',
-                'image_cover' => '1216237126318273-image-cover.svg',
-                'image' => '1923714128479123-image.png',
                 'instagram' => 'instagramurl',
                 'twitter' => 'twitterurl',
                 'facebook' => 'facebookurl',

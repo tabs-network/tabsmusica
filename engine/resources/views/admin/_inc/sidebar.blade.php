@@ -4,7 +4,7 @@
             <i class="fa fa-circle-notch text-primary"></i>
         </span>
         <span class="smini-hide font-size-h5 tracking-wider">
-            One<span class="font-w400">UI</span>
+            TA<span class="font-w400">BS</span>
         </span>
     </a>
     <div>
@@ -52,38 +52,8 @@
                             <span class="nav-main-link-name">Setting Web</span>
                         </a>
                     </li>
-                    <li class="nav-main-item">
-                        <a class="nav-main-link" href="#">
-                            <span class="nav-main-link-name">Sub 3</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-main-item">
-                <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true"
-                    aria-expanded="false" href="#">
-                    <i class="nav-main-link-icon si si-energy"></i>
-                    <span class="nav-main-link-name">Example 2</span>
-                </a>
-                <ul class="nav-main-submenu">
-                    <li class="nav-main-item">
-                        <a class="nav-main-link" href="#">
-                            <span class="nav-main-link-name">Sub 1</span>
-                        </a>
-                    </li>
-                    <li class="nav-main-item">
-                        <a class="nav-main-link" href="#">
-                            <span class="nav-main-link-name">Sub 2</span>
-                        </a>
-                    </li>
-                    <li class="nav-main-item">
-                        <a class="nav-main-link" href="#">
-                            <span class="nav-main-link-name">Sub 3</span>
-                        </a>
-                    </li>
                 </ul>
             </li>
         </ul>
-        
     </div>
 </div>

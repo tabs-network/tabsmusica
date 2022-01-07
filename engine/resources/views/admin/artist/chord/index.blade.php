@@ -59,11 +59,11 @@
         <div class="col-6 col-lg-3">
             <a class="block block-rounded block-link-shadow text-center" href="#">
                 <div class="block-content block-content-full">
-                    <div class="font-size-h2 text-dark">56</div>
+                    <div class="font-size-h2 text-dark">{{ $count }}</div>
                 </div>
                 <div class="block-content py-2 bg-body-light">
                     <p class="font-w600 font-size-sm text-muted mb-0">
-                        Artist
+                        Chord
                     </p>
                 </div>
             </a>
@@ -74,15 +74,10 @@
             <h3 class="block-title">CHORD</h3>
         </div>
         <div class="block-content">
-            <form action="#" method="GET">
+            <form action="{{ route('admin.artist.chord.search', $artist->id) }}" method="GET">
                 <div class="form-group">
                     <div class="input-group">
-                        {{-- @if (request()->routeIs('admin.product.search'))
-                        <input type="text" class="form-control form-control-alt" name="key" placeholder="Search product/sku" value="{{ request()->key }}">
-                        @else
-                        <input type="text" class="form-control form-control-alt" name="key" placeholder="Search product/sku">
-                        @endif --}}
-                        <input type="text" class="form-control form-control-alt" name="key" placeholder="Search Chord">
+                        <input type="text" class="form-control form-control-alt" name="key" placeholder="Search Chord" value="{{ request()->key }}">
                         <div class="input-group-append">
                             <span class="input-group-text bg-body border-0">
                                 <i class="fa fa-search"></i>

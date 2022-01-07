@@ -16,7 +16,8 @@ class adminArtistChordController extends Controller
     {
         $artist = Artist::find($artist_id);
         $chord = Chord::where('artist_id', $artist_id)->simplePaginate(10);
-        return view('admin.artist.chord.index', compact('artist', 'chord'));
+        $count = Chord::where('artist_id', $artist_id)->count();
+        return view('admin.artist.chord.index', compact('artist', 'chord', 'count'));
     }
 
     public function create($artist_id)
@@ -64,5 +65,15 @@ class adminArtistChordController extends Controller
         $chord->save();
 
         return redirect()->route('admin.artist.chord.index', $chord->artist_id)->with('status', 'Data has been successfully changed');
+    }
+
+    public function search(Request $request, $artist_id)
+    {
+        $chord = Chord::where('artist_id', $artist_id)->where('title', 'like', '%'.$request->key.'%')->simplePaginate(10);
+        $chord->appends(['key' => $request->key]);
+        $artist = Artist::find($artist_id);
+        $count = Chord::where('artist_id', $artist_id)->count();
+
+        return view('admin.artist.chord.index', compact('chord', 'count','artist'));
     }
 }

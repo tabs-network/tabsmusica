@@ -6,19 +6,14 @@
 
 @section ('content')
 
-<section class="bg-dark py-5">
+<img src="{{ url('assets/webSetting/cover.svg') }}" alt="Chord dan Gita Lagu Indonesia Barat Populer">
+
+<section class="bg-dark py-5 text-center">
     <div class="container">
-        <div class="row g-3">
-            <div class="col-md-4 text-center">
-                <img src="{{ url('assets/webSetting/logo.svg') }}" alt="Chord dan Gita Lagu Indonesia Barat Populer" width="300">
-            </div>
-            <div class="col-md-8">
-                <div class="fs-4 fw-bold text-primary">TABS MUSICA</div>
-                <h1 class="fs-6"><a href="{{ url()->current() }}" class="text-decoration-none text-light"> Website Kunci Gitar Dan Chord Gitar Lagu Terlengkap</a></h1>
-                <div class="text-light">
-                    Tabs Musica adalah website yang membahas seputar kunci dan chord gitar lagu populer
-                </div>
-            </div>
+        <div class="fs-4 fw-bold text-primary">TABS MUSICA</div>
+        <h1 class="fs-6"><a href="{{ url()->current() }}" class="text-decoration-none text-light"> Website Kunci Gitar Dan Chord Gitar Lagu Terlengkap</a></h1>
+        <div class="text-light">
+            Tabs Musica adalah website yang membahas seputar kunci dan chord gitar lagu populer
         </div>
     </div>
 </section>
