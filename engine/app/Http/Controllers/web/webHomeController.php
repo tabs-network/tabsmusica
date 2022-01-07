@@ -12,7 +12,7 @@ class webHomeController extends Controller
     public function index()
     {
         $artist = Artist::orderBy('id', 'desc')->take(12)->get();
-        $chord = Chord::take(5)->get();
+        $chord = Chord::take(9)->get();
         return view('web.home.index', compact('artist', 'chord'));
     }
 }

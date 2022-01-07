@@ -14,7 +14,7 @@ class webChordController extends Controller
     {
         $chord = Chord::orderBy('id', 'desc')->paginate(10);
         $artist = Artist::orderBy('id', 'desc')->take(12)->get();
-        $popularChord = Chord::orderBy('count', 'desc')->take(10)->get();
+        $popularChord = Chord::orderBy('count', 'desc')->take(5)->get();
         return view('web.chord.index', compact('chord', 'artist', 'popularChord'));
     }
 

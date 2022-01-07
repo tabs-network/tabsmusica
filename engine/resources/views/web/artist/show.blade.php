@@ -22,21 +22,13 @@
 </section>
 
 <section class="my-3">
-    <div class="container">
-        <div class="row g-3 justify-content-center mb-2">
-            <div class="col-lg-3">
-                <div class="bg-dark rounded-3 shadow-sm">
-                    <img src="{{ url('assets/artist/500x500/'.$artist->image) }}" alt="aasdad" class="img-fluid rounded-3">
-                </div>
-            </div>
-            <div class="col-lg-9">
-                <div class="fs-4 fw-bold text-primary text-uppercase">{{ $artist->name }}</div>
-                <h1 class="fs-6 fw-normal text-muted m-0 p-0">Kumpulan Chord Gitar dan Video {{ $artist->name }}</h1>
-                <span class="badge bg-primary fw-light">Total Chord : 10</span>
-                <div>
-                    {!! $artist->description !!}
-                </div>
-            </div>
+    <div class="container mb-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <img src="{{ url('assets/artist/300x300/'.$artist->image) }}" alt="aasdad" class="img-fluid rounded-pill" width="200">
+                <div class="fs-2 fw-bold text-primary text-uppercase mt-2">{{ $artist->name }}</div>
+                {!! $artist->description !!}
+            </div>   
         </div>
     </div>
 </section>

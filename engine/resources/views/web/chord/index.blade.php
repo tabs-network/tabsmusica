@@ -35,7 +35,7 @@
                                         <div class="d-flex">
                                             <img src="{{ url('assets/artist/300x300/'.$v->artist->image) }}" class="rounded-pill" alt="" width="50" height="50">
                                             <div class="ms-2 align-self-center">
-                                                <div class="fs-6 text-primary fw-bold">{{ $v->title }}</div>
+                                                <h3 class="fs-6 fw-bold text-dark m-0">{{ $v->title }}</h3>
                                                 <div class="fs-6 text-muted">
                                                     {{ $v->artist->name }}
                                                 </div>
@@ -61,7 +61,7 @@
                     <div class="d-flex align-items-center my-3">
                         <img src="{{ url('assets/artist/300x300/'.$v->artist->image) }}" alt="adadasda" class="rounded-pill" width="50" height="50">
                         <div class="ms-2">
-                            <h3 class="fs-6 fw-bold text-primary m-0 p-0">{{ $v->title }}</h3>
+                            <h3 class="fs-6 fw-bold m-0">{{ $v->title }}</h3>
                             <div class="text-muted">{{ $v->artist->name }}</div>
                         </div>
                     </div>
