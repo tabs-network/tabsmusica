@@ -19,7 +19,7 @@ use App\Http\Controllers\admin\adminSettingWebController;
 
 // Xml
 Route::get('/sitemap.xml', [webXmlController::class, 'sitemap'])->name('web.xml.sitemap');
-Route::get('/page_sitemap.xml', [webXmlController::class, 'chord'])->name('web.xml.page');
+Route::get('/page_sitemap.xml', [webXmlController::class, 'page'])->name('web.xml.page');
 Route::get('/chord_sitemap.xml', [webXmlController::class, 'chord'])->name('web.xml.chord');
 Route::get('/artist_sitemap.xml', [webXmlController::class, 'artist'])->name('web.xml.artist');
 
