@@ -1,5 +1,9 @@
 @extends('web._inc.main')
 
+@section('metaTitle', $artist->meta_title)
+@section('metaDescription', $artist->meta_description)
+@section('metaImage', url('assets/artist/500x500/'.$artist->image))
+
 @section ('content')
 <section class="my-3">
     <div class="container my-3">
