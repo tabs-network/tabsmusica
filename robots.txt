@@ -1,2 +1,8 @@
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /login/admin/
+
+Sitemap: https://tabsmusica.com/sitemap.xml
+Sitemap: https://tabsmusica.com/page_sitemap.xml
+Sitemap: https://tabsmusica.com/artist_sitemap.xml
+Sitemap: https://tabsmusica.com/chord_sitemap.xml
