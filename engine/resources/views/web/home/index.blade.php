@@ -20,9 +20,11 @@
 
 <section class="py-5">
     <div class="container">
-        <div class="fs-4 fw-bold text-primary">ARTIST</div>
-        <div class="d-flex align-items-end justify-content-between mb-2">
-            <h2 class="fs-6 text-muted m-0">Artis</h2>
+        <div class="d-flex align-items-center justify-content-between">
+            <div>
+                <div class="fs-4 fw-bold text-primary">ARTIST</div>
+                <h2 class="fs-6 text-muted">Artis</h2>
+            </div>
             <a href="#" class="text-decoration-none text-light"><span class="badge fw-light bg-primary">Selengkapnya</span></a> 
         </div>
         <div class="row g-3">
@@ -44,8 +46,14 @@
 
 <section class="py-5 bg-dark">
     <div class="container">
-        <div class="fs-4 fw-bold text-primary">CHORD DAN KUNCI GITAR</div>
-        <h2 class="fs-6 text-muted">Chord dan kunci gitar lagu populer indonesia dan barat</h2>
+        <div class="d-flex align-items-center justify-content-between">
+            <div>
+                <div class="fs-4 fw-bold text-primary">CHORD DAN KUNCI GITAR</div>
+                <h2 class="fs-6 text-muted">Chord dan kunci gitar lagu populer indonesia dan barat</h2>
+            </div>
+            <a href="#" class="text-decoration-none text-light"><span class="badge fw-light bg-primary">Selengkapnya</span></a> 
+        </div>
+
         <div class="row g-3 mt-2">
             @foreach($chord as $v)
             <div class="col-12 col-sm-6 col-md-6 col-lg-4">

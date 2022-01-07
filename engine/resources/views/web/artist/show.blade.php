@@ -44,7 +44,7 @@
                     <tr>
                         <td>
                             <a href="{{ route('web.chord.show', $v->slug) }}" class="text-decoration-none">
-                                <h3 class="fs-6 fw-bold m-0">{{ $v->title }}</h3>
+                                <h3 class="fs-6 fw-bold text-dark m-0">{{ $v->title }}</h3>
                                 <div class="fs-6 text-muted">{{ $v->artist->name }}</div>
                             </a>
                         </td>
