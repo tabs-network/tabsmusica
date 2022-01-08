@@ -24,6 +24,7 @@ Route::get('/chord_sitemap.xml', [webXmlController::class, 'chord'])->name('web.
 Route::get('/artist_sitemap.xml', [webXmlController::class, 'artist'])->name('web.xml.artist');
 
 // Web
+Route::get('chord/search/', [webChordController::class, 'search'])->name('web.chord.search');
 Route::get('/', [webHomeController::class, 'index'])->name('web.home.index');
 Route::get('artist/', [webArtistController::class, 'index'])->name('web.artist.index');
 Route::get('artist/{slug}', [webArtistController::class, 'show'])->name('web.artist.show');

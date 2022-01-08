@@ -2,7 +2,7 @@
 
 @section('metaTitle', settingMetaTag('Home')->meta_title)
 @section('metaDescription', settingMetaTag('Home')->meta_description)
-@section('metaImage', 'asdasdsadadd')
+@section('metaImage', url('assets/webSetting/image.png'))
 
 @section ('content')
 
@@ -25,7 +25,7 @@
                 <div class="fs-4 fw-bold text-primary">ARTIST</div>
                 <h2 class="fs-6 text-muted">Artis</h2>
             </div>
-            <a href="#" class="text-decoration-none text-light"><span class="badge fw-light bg-primary">Selengkapnya</span></a> 
+            <a href="{{ route('web.artist.index') }}" class="text-decoration-none text-light"><span class="badge fw-light bg-primary">Selengkapnya</span></a> 
         </div>
         <div class="row g-3">
             @foreach($artist as $v)
@@ -51,7 +51,7 @@
                 <div class="fs-4 fw-bold text-primary">CHORD DAN KUNCI GITAR</div>
                 <h2 class="fs-6 text-muted">Chord dan kunci gitar lagu populer indonesia dan barat</h2>
             </div>
-            <a href="#" class="text-decoration-none text-light"><span class="badge fw-light bg-primary">Selengkapnya</span></a> 
+            <a href="{{ route('web.chord.index') }}" class="text-decoration-none text-light"><span class="badge fw-light bg-primary">Selengkapnya</span></a> 
         </div>
 
         <div class="row g-3 mt-2">
@@ -78,7 +78,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ settingMetaTag('Home')->meta_title }}">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="asadsadasdadadadad">
+    <meta property="og:image" content="{{ url('assets/webSetting/image.png') }}">
     <meta property="og:description" content="{{ settingMetaTag('Home')->meta_description }}">
 
 @endsection

@@ -2,7 +2,7 @@
 
 @section('metaTitle', settingMetaTag('Artist')->meta_title)
 @section('metaDescription', settingMetaTag('Artist')->meta_description)
-@section('metaImage', 'asdasdsadadd')
+@section('metaImage', url('assets/webSetting/image.png'))
 
 @section ('content')
 <section class="my-3">
@@ -46,7 +46,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{ settingMetaTag('artist')->meta_title }}">
     <meta property="og:url" content="{{ url()->current() }}">
-    <meta property="og:image" content="asadsadasdadadadad">
+    <meta property="og:image" content="{{ url('assets/webSetting/image.png') }}">
     <meta property="og:description" content="{{ settingMetaTag('artist')->meta_description }}">
 
 @endsection

@@ -24,7 +24,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-8 text-center">
                 <img src="{{ url('assets/artist/500x500/'.$chord->artist->image) }}" alt="aasdad" class="img-fluid rounded-pill" width="200">
-                <div class="fs-2 fw-bold text-primary text-uppercase mt-2">{{ $chord->artist->name }}</div>
+                <div class="fs-3 fw-bold text-primary text-uppercase mt-2">{{ $chord->artist->name }}</div>
                 {!! $chord->artist->description !!}
             </div>   
         </div>
@@ -35,7 +35,12 @@
     <div class="container">
         <div class="row g-3">
             <div class="col-lg-8">
-                <h1 class="fs-4 fw-bold mb-3 text-primary">{{ $chord->title }}</h1>
+                <div class="mb-3">
+                    <h1 class="fs-4 fw-bold text-primary m-0">{{ $chord->title }}</h1>
+                    <a href="{{ route('web.artist.show', $chord->artist->slug) }}">
+                        <span class="badge bg-primary fw-light">{{ $chord->artist->name }}</span>
+                    </a>
+                </div>
                 <div>
                     {!! $chord->content !!}
                 </div>
@@ -93,4 +98,44 @@
         </div>
     </div>
 </section>
+@endsection
+
+@section('og')
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ $chord->meta_title }}">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ url('assets/artist/500x500/'.$chord->artist->image) }}">
+    <meta property="og:description" content="{{ $chord->meta_description }}">
+
+@endsection
+
+@section('schema')
+
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org/",
+        "@type": "Article",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ url()->current() }}"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Tabs Musica"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Tabs Musica",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "asdasdasdasd"
+            }
+        },
+        "headline": "{{ $chord->title }}",
+        "image": "{{ url('assets/artist/500x500/'.$chord->artist->image) }}",
+        "datePublished": ""
+        }
+    </script>
+
 @endsection

@@ -16,8 +16,8 @@
                     <a class="nav-link" href="{{ route('web.chord.index') }}">CHORD</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2 shadow-none" type="search" placeholder="Cari Chord" aria-label="Search">
+            <form action="{{ route('web.chord.search') }}" method="get" class="d-flex">
+                <input class="form-control me-2 shadow-none" type="search" name="key" placeholder="Cari Chord" aria-label="Search" value="{{ request()->key }}">
             </form>
         </div>
     </div>
