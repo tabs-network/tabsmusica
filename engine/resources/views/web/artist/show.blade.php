@@ -1,9 +1,5 @@
 @extends('web._inc.main')
 
-@section('metaTitle', $artist->meta_title)
-@section('metaDescription', $artist->meta_description)
-@section('metaImage', url('assets/artist/500x500/'.$artist->image))
-
 @section ('content')
 <section class="my-3">
     <div class="container my-3">
@@ -76,4 +72,48 @@
         </div>
     </div>
 </section>
+@endsection
+
+@section('metaTitle', $artist->meta_title)
+@section('metaDescription', $artist->meta_description)
+@section('metaImage', url('assets/artist/500x500/'.$artist->image))
+
+@section('og')
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ $artist->meta_title }}">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ url('assets/artist/500x500/'.$artist->image) }}">
+    <meta property="og:description" content="{{ $artist->meta_description }}">
+
+@endsection
+
+@section('schema')
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "Article",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "{{ url()->current() }}"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Tabs Musica"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Tabs Musica",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "asdasdasdasd"
+                }
+            },
+            "headline": "{{ $artist->meta_title }}",
+            "image": "{{ url('assets/artist/500x500/'.$artist->image) }}",
+            "datePublished": ""
+        }
+    </script>
+
 @endsection
